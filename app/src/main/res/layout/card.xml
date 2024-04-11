@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/base_Card"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_GL_Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom_GL_Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/passportBase_Card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="@id/top_GL_Card"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_GL_Card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        style="@style/blockStyle">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topPhoto_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomPhoto_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/text_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/textEnd_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"/>
+
+        <TextView
+            android:id="@+id/textPassport_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:textStyle="bold"
+            android:text="Паспорт громадянина України"/>
+
+        <ImageView
+            android:id="@+id/personalPhotoPassport_Card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/topPhoto_GL_Card"
+            app:layout_constraintBottom_toBottomOf="@id/bottomPhoto_GL_Card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/text_GL_Card"
+            android:layout_marginHorizontal="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="3:4"/>
+
+        <TextView
+            android:id="@+id/birthdayTextPassport_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/text_GL_Card"
+            app:layout_constraintTop_toTopOf="@id/topPhoto_GL_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEnd_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="Дата народження:" />
+        <TextView
+            android:id="@+id/birthdayPassport_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/text_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/birthdayTextPassport_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEnd_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="10.10.10" />
+
+        <TextView
+            android:id="@+id/numberTextPassport_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/text_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/birthdayPassport_Card"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/textEnd_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="Номер:" />
+
+        <TextView
+            android:id="@+id/numberPassport_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/text_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/numberTextPassport_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEnd_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="00000000" />
+
+
+        <TextView
+            android:id="@+id/expirationDateTextPassport_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/text_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/numberPassport_Card"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/textEnd_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="Термін дії:" />
+
+        <TextView
+            android:id="@+id/expirationDatePassport_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/text_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/expirationDateTextPassport_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEnd_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="25.01.24" />
+
+        <ImageView
+            app:layout_constraintTop_toBottomOf="@id/personalPhotoPassport_Card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/background"/>
+
+        <TextView
+            android:id="@+id/namePassport_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottomPhoto_GL_Card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:textStyle="bold"
+            android:text="Дія Надія Володимірівна"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/driverBase_Card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="@id/top_GL_Card"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_GL_Card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        style="@style/blockStyle">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topPhotoDriver_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomPhotoDriver_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/textDriver_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/textEndDriver_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"/>
+
+        <TextView
+            android:id="@+id/textDriver_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:textStyle="bold"
+            android:text="Посвідчення водія"/>
+
+        <ImageView
+            android:id="@+id/personalPhotoDriver_Card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/topPhotoDriver_GL_Card"
+            app:layout_constraintBottom_toBottomOf="@id/bottomPhotoDriver_GL_Card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textDriver_GL_Card"
+            android:layout_marginHorizontal="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="3:4"/>
+
+        <TextView
+            android:id="@+id/birthdayTextDriver_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textDriver_GL_Card"
+            app:layout_constraintTop_toTopOf="@id/topPhotoDriver_GL_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEndDriver_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="Дата народження:" />
+        <TextView
+            android:id="@+id/birthdayDriver_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textDriver_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/birthdayTextDriver_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEndDriver_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="10.10.10" />
+
+        <TextView
+            android:id="@+id/numberTextDriver_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textDriver_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/birthdayDriver_Card"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/textEndDriver_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="Категорія" />
+
+        <TextView
+            android:id="@+id/categoryDriver_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textDriver_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/numberTextDriver_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEndDriver_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="А" />
+
+
+        <TextView
+            android:id="@+id/issueDateTextDriver_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textDriver_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/categoryDriver_Card"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/textEndDriver_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="Дата видачі:" />
+
+        <TextView
+            android:id="@+id/issueDateDriver_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textDriver_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/issueDateTextDriver_Card"
+            app:layout_constraintEnd_toEndOf="@id/textEndDriver_GL_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:text="25.01.24" />
+
+        <ImageView
+            app:layout_constraintTop_toBottomOf="@id/personalPhotoDriver_Card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/background"/>
+
+        <TextView
+            android:id="@+id/nameDriver_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottomPhotoDriver_GL_Card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:textStyle="bold"
+            android:text="Дія Надія Володимірівна"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/personalNumberBase_Card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="@id/top_GL_Card"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_GL_Card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        style="@style/blockStyle">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middle_GL_Card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <TextView
+            android:id="@+id/textPersonalNumber_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:textStyle="bold"
+            android:text="Карта платника податків"/>
+        <TextView
+            android:id="@+id/namePersonalNumber_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/middle_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/textPersonalNumber_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:text="Дія Надія"/>
+        <TextView
+            android:id="@+id/birthdayTextPersonalNumber_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/middle_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/namePersonalNumber_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:text="Дата народження:"/>
+        <TextView
+            android:id="@+id/birthdayPersonalNumber_Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/middle_GL_Card"
+            app:layout_constraintTop_toBottomOf="@id/birthdayTextPersonalNumber_Card"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="10dp"
+            android:text="10.10.10"/>
+
+
+        <TextView
+            android:id="@+id/personalNumber_Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:text="123456788"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
