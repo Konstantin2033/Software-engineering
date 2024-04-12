@@ -20,3 +20,8 @@ The adapter also uses different function for different documents to awoid puttin
 
 **Program to Interfaces not Implementations** here for example the project uses class container to interract with documents classes objects and even sort them in Array
 [Example](https://github.com/Konstantin2033/Software-engineering/blob/9539bd24588ac2d05d7925da713184fc41d0ae47/app/src/main/java/com/example/newdiya_lab1/Container.kt#L3)
+
+
+Task #2 Demonstration
+Project is made in Android Stuido using Kotlin to immitate Dia application. So instead of printin in console results I'll just show it here as screen record:
+[Recording](1.gif)
